@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GraphOOD Tutorial</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* 标题 */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #743481;
+    color: white;
+}
+
+/* 标题字体加大 */
+.header h1 {
+    font-size: 40px;
+}
+
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 右侧链接*/
+.navbar a.right {
+    float: right;
+}
+
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: rgb(41, 192, 197);
+    color: black;
+}
+
+/* 列容器 */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+a:link { 
+    color:#3c9fd8; 
+    text-decoration:underline; 
+    } 
+    a:visited { 
+    color:#3c9fd8; 
+    text-decoration:none; 
+    } 
+    a:hover { 
+    color:#c6d350; 
+    text-decoration:none; 
+    } 
+    a:active { 
+    color:#e730d8; 
+    text-decoration:none; 
+    }
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Out-of-Distribution Generalization on Graphs</h1>
+  <p  style="font-size:28px;"><a href= "https://www2023.thewebconf.org/" target="_blank">WWW 2023, AUSTIN, USA</a></p>
+
+  <p  style="font-size:28px;"><a href= "https://arxiv.org/abs/2202.07987" target="_blank">Survey</a>, <a href= "https://graph.ood-generalization.com/" target="_blank">Paper Collections</a></p>
+
+</div>
+
+<!--
+<div class="navbar">
+  <a href="#">link</a>
+  <a href="#">链接</a>
+  <a href="#">链接</a>
+  <a href="#" class="right">链接</a>
+</div>
+-->
+
+
+<div class="row">
+  <div class="side", style="font-size:18px;">
+      <h1>Speakers</h> <br>
+      <h3><a href="http://mn.cs.tsinghua.edu.cn/xinwang/" target="_blank">Xin Wang</a>  Tsinghua University, China</h3> 
+      <p>Xin Wang is currently an Assistant Professor at the Department of Computer Science
+         and Technology, Tsinghua University. He got both of his Ph.D. and B.E degrees in Computer
+         Science and Technology from Zhejiang University, China. He also holds a second Ph.D.
+         degree in Computing Science from Simon Fraser University, Canada. His research interests
+         include cross-modal multimedia intelligence and recommendation in social media. He has
+         published several high-quality research papers in top conferences including ICML, KDD,
+         WWW, SIGIR, AAAI, IJCAI, CIKM etc.
+      </p>
+      
+	  <h3> <a href="https://haoyang.li/" target="_blank">Haoyang Li</a>  Tsinghua University, China</h3> 
+      <p>Haoyang Li is currently a Ph.D. candidate in the Department of Computer Science and Technology, Tsinghua University. 
+        He received his B.E. from the Department of Computer Science and Technology, Tsinghua University, in 2018. 
+        His research interests are mainly in machine learning on graphs and out-of-distribution generalization. 
+        He has published over 10 papers in prestigious conferences and journals, e.g., NeurIPS, KDD, ICLR, ICDE, IEEE TKDE, etc.
+      </p>
+	  
+	  <h3> <a href="https://scholar.google.com/citations?hl=en&user=7t2jzpgAAAAJ" target="_blank">Wenwu Zhu</a>  Tsinghua University, China</h3> 
+      <p>Wenwu Zhu is currently a Professor and the Vice Chair of the Department of Computer
+         Science and Technology at Tsinghua University, the Vice Dean of National Research Center
+         for Information Science and Technology, and the Vice Director of Tsinghua Center for Big
+         Data. Prior to his current post, he was a Senior Researcher and Research Manager at
+         Microsoft Research Asia. He was the Chief Scientist and Director at Intel Research China
+         from 2004 to 2008. He worked at Bell Labs New Jersey as Member of Technical Staff during
+         1996-1999. He received his Ph.D. degree from New York University in 1996 in Electrical and
+         Computer Engineering.
+	  </p>
+      <p>Wenwu Zhu is an AAAS Fellow, IEEE Fellow, SPIE Fellow, and a member of The
+         Academy of Europe (Academia Europaea). He has published over 300 referred papers in
+         the areas of multimedia computing, communications and networking, and big data. He is
+         inventor or co-inventor of over 50 patents. He received eight Best Paper Awards, including
+         ACM Multimedia 2012 and IEEE Transactions on Circuits and Systems for Video Technology
+         in 2001. His current research interests are in the area of Cyber-Physical-Human big data
+         computing, and Cross-media big data and intelligence.
+      </p>
+	  <p>Wenwu Zhu served as EiC for IEEE Transactions for Multimedia from January 2017 to December 2019. He also served
+         as Guest Editors for the Proceedings of the IEEE, IEEE Journal on Selected Areas in
+         Communications, ACM Transactions on Intelligent Systems and Technology, etc.; and
+         Associate Editors for IEEE Transactions on Mobile Computing, ACM Transactions on
+         Multimedia, IEEE Transactions on Circuits and Systems for Video Technology, and IEEE
+         Transactions on Big Data, etc. He served in the steering committee for IEEE Transactions
+         on Multimedia (2015-2016) and IEEE Transactions on Mobile Computing (2007-2010),
+         respectively. He served as TPC Co-chair for ACM Multimedia 2014 and IEEE ISCAS 2013,
+         respectively. He serves as General Co-Chair for ACM Multimedia 2018 and ACM CIKM
+         2019, respectively.
+      </p>
+
+       
+	  <!--
+	  <img class="fakeimg" style="height:200px;" source="assets/images/me-6.png">
+	  <h3>更多内容</h3>
+      <p>我的更多内容</p>
+      <div class="fakeimg" style="height:60px;">这边插入图像</div><br>
+      <div class="fakeimg" style="height:60px;">这边插入图像</div><br>
+      <div class="fakeimg" style="height:60px;">这边插入图像</div>
+	  -->
+  </div>
+  <div class="main">
+      <h2>Tutorial Description</h2>
+     <!-- <div class="fakeimg" style="height:200px;">图像</div> -->
+      <p>Graph machine learning has been extensively studied in both academia and industry. Although booming with a vast number of emerging methods and techniques, most of the literature is built on the in-distribution (I.D.) hypothesis, i.e., testing and training graph data are sampled from the identical distribution. However, this I.D. hypothesis can hardly be satisfied in many real-world graph scenarios where the model performance substantially degrades when there exist distribution shifts between testing and training graph data. To solve this critical problem, out-of-distribution (OOD) generalization on graphs, which goes beyond the I.D. hypothesis, has made great progress and attracted ever-increasing attention from the research community. This tutorial is to disseminate and promote the recent research achievement on out-of-distribution generalization on graphs, which is an exciting and fast-growing research direction in the general field of machine learning and data mining. We will advocate novel, high-quality research findings, as well as innovative solutions to the challenging problems in out-of-distribution generalization and its applications on graphs. This topic is at the core of the scope of The Web Conference, and is attractive to machine learning as well as data mining audience from both academia and industry.
+	  </p>
+      
+      <br>
+      <h2>Tutorial Outline</h2>
+      <p>To the best of our knowledge, this tutorial is the first to systematically and comprehensively discuss out-of-distribution generalization on graphs, 
+          with a great potential to draw a large amount of interests in the community.
+        The tutorial is planned for 1.5h and organized into 4 sections.
+         <li>The research and industrial motivation for out-of-distribution generalization on graphs </li>
+         <li>Disentanglement-based and causality-based graph models</li>
+         <li>Graph invariant learning, graph adversarial training, and graph self-supervised learning </li>
+         <li>Discussions and future directions </li>
+      </p>
+	  <br>
+	  <h2>Target Audience and Prerequisites</h2>
+	  <p>This tutorial will be highly accessible to the whole machine learning and data mining community, including researchers, students and practitioners who are interested in disentangled representation learning, causal inference, self-supervised learning, invariant learning and their applications in graph related tasks. The tutorial will be self-contained and designed for introductory and intermediate audiences. No special prerequisite knowledge is required to attend this tutorial.     
+	  </p>
+	  
+	  <br>
+	  <h2>Motivation, Relevance and Rationale</h2>
+	  <p>Out-of-distribution generalization on graphs is becoming a hot research topic in both academia and industry. This tutorial is to disseminate and promote the recent research achievements on out-of-distribution generalization on graphs, which is an exciting and fast-growing research direction in the general field of machine learning and graph neural network. We will advocate novel, high-quality research findings, as well as innovative solutions to the challenging problems in out-of-distribution generalization on graphs. This topic is at the core of the scope of The Web Conference, and is attractive to The Web Conference audience from both academia and industry.
+	  </p>
+      
+	  <br>
+	  <h2>Tutorial Overview</h2>
+	  <p>Many graph machine learning algorithms or graph neural networks have been proposed and shown to be successful when the test graph data and training graph data come from the same distribution. However, the best-performing graph models for a given distribution of training data typically exploit subtle statistical relationships among features, making them potentially more prone to prediction error when applied to test data whose distribution differs from that in training data. How to develop graph learning models that are stable and robust to shifts in data is of paramount importance for both academic research and real applications.
+	  </p>
+
+      <p>
+        In this tutorial, we discuss promising solutions to out-of-distribution generalization problem from two aspects:
+      </p>
+	  
+	  <h3>Out-of-distribution generalized graph model</h3>
+	  <p>Disentangled graph representation learning aims to learn representations that separate these distinct and informative factors behind the graph data and characterize these factors in different parts of the factorized vector representations. Such representations have been demonstrated to be more resilient to the complex variants, and able to benefit OOD generalization. Causal inference, which refers to the process of drawing a conclusion about a causal connection based on the conditions of the occurrence of an effect, is a powerful statistical modeling tool for explanatory and stable learning. In this tutorial, we focus on disentanglement and causal inference inspired graph models, aiming to explore informative independent latent factors and causal knowledge from observational graph data to improve the interpretability and stability of graph machine learning algorithms.  We will give an introduction to disentanglement and causal inference, and introduce some recent representative approaches to  produce OOD generalized graph representations. 
+	  </p>
+	  <h3>Out-of-distribution generalized graph training strategy</h3>
+	  <p>Besides Out-of-distribution generalized graph model, some works focus on exploiting training schemes with tailored optimization objectives and constraints to promote OOD generalization on graphs, including graph invariant learning, graph adversarial training, and graph self-supervised learning. Some graph invariant learning methods are built upon the invariance principle to address the OOD generalization problem from a principle way, which aim to exploit the invariant relationships between features and labels across different distributions while disregarding the variant spurious correlations. Some graph adversarial training and graph self-supervised learning methods have also been demonstrated to improve graph model robustness against distribution shifts and OOD generalization ability. We will give an introduction to these graph training strategies and introduce some recent approaches for handling OOD generalization. 
+	  </p>
+      <p> The tutorial will be presented lively. However, in case of any technical problems, we may also provide a pre-recorded video for the tutorial. </p>
+
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Updated on Apr, 2023</h2>
+</div>
+
+</body>
+</html>
