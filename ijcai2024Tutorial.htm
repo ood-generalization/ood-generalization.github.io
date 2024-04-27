@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GraphOOD Tutorial</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* 标题 */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #743481;
+    color: white;
+}
+
+/* 标题字体加大 */
+.header h1 {
+    font-size: 40px;
+}
+
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 右侧链接*/
+.navbar a.right {
+    float: right;
+}
+
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: rgb(41, 192, 197);
+    color: black;
+}
+
+/* 列容器 */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+a:link { 
+    color:#3c9fd8; 
+    text-decoration:underline; 
+    } 
+    a:visited { 
+    color:#3c9fd8; 
+    text-decoration:none; 
+    } 
+    a:hover { 
+    color:#c6d350; 
+    text-decoration:none; 
+    } 
+    a:active { 
+    color:#e730d8; 
+    text-decoration:none; 
+    }
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Graph Machine Learning under Distribution Shifts:</h1>
+  <h2>Adaptation, Generalization and Extension to LLM</h2>
+  <p  style="font-size:28px;"><a href= "https://ijcai24.org/" target="_blank">IJCAI 2024, Jeju</a></p>
+
+  <p  style="font-size:28px;"><a href= "https://arxiv.org/abs/2202.07987" target="_blank">Survey</a>, <a href= "https://graph.ood-generalization.com/" target="_blank">Paper Collections</a></p>
+
+</div>
+
+
+<div class="row">
+  <div class="side", style="font-size:18px;">
+      <h1>Speakers</h> <br>
+      <h3><a href="http://mn.cs.tsinghua.edu.cn/xinwang/" target="_blank">Xin Wang</a>  Tsinghua University, China</h3> 
+      <p>Xin Wang is currently an Associate Professor at the Department of Computer Science and Technology, Tsinghua University. He got both his Ph.D. and B.E degrees in Computer Science and Technology from Zhejiang University, China. He also holds a Ph.D. degree in Computing Science from Simon Fraser University, Canada. His research interests include multimedia intelligence, machine learning and its applications in multimedia big data analysis. He has published over 150 high-quality research papers in top journals and conferences including IEEE TPAMI, IEEE TKDE, ACM TOIS, ICML, NeurIPS, ACM KDD, ACM Web Conference, ACM SIGIR and ACM Multimedia etc., winning three best paper awards. He is the recipient of 2020 ACM China Rising Star Award, 2022 IEEE TCMC Rising Star Award and 2023 DAMO Academy Young Fellow.
+      </p>
+      
+	  <h3> <a href="https://haoyang.li/" target="_blank">Haoyang Li</a>  Cornell University, USA</h3> 
+      <p>Haoyang Li is currently a postdoc researcher at Weill Cornell Medicine of Cornell University. He received his Ph.D. from the Department of Computer Science and Technology of Tsinghua University in 2023. He received his B.E. from the Department of Computer Science and Technology of Tsinghua University in 2018. His research interests are mainly in machine learning on graphs and out-of-distribution generalization. He has published high-quality papers in prestigious journals and conferences, e.g., IEEE TKDE, ACM TOIS, NeurIPS, ICLR, ACM KDD, ACM Web Conference, AAAI, IJCAI, ACM Multimedia, IEEE ICDE, IEEE ICDM, etc., winning one best paper award.
+      </p>
+
+      <h3> <a href="https://zzythu.com/" target="_blank">Zeyang Zhang</a>  Tsinghua University, China</h3> 
+      <p>Zeyang Zhang received his B.E. from the Department of Computer Science and Technology, Tsinghua University in 2020. He is a Ph.D. candidate in the Department of Computer Science and Technology of Tsinghua University. His main research interests focus on automated machine learning, out-of-distribution generalization and large language models. He has published several papers in prestigious conferences, e.g., NeurIPS, AAAI, etc.
+      </p>
+	  
+	  <h3> <a href="https://scholar.google.com/citations?hl=en&user=7t2jzpgAAAAJ" target="_blank">Wenwu Zhu</a>  Tsinghua University, China</h3> 
+      <p>Wenwu Zhu is currently a Professor in the Department of Computer Science and Technology at Tsinghua University, the Vice Dean of National Research Center for Information Science and Technology, and the Vice Director of Tsinghua Center for Big Data. Prior to his current post, he was a Senior Researcher and Research Manager at Microsoft Research Asia. He was the Chief Scientist and Director at Intel Research China from 2004 to 2008. He worked at Bell Labs New Jersey as Member of Technical Staff during 1996-1999. He received his Ph.D. degree from New York University in 1996.</p>
+
+      <p>His research interests include graph machine learning, curriculum learning, data-driven multimedia, big data. He has published over 400 referred papers, and is inventor of over 80 patents. He received ten Best Paper Awards, including ACM Multimedia 2012 and IEEE Transactions on Circuits and Systems for Video Technology in 2001 and 2019.</p>
+
+      <p>He serves as the EiC for IEEE Transactions on Circuits and Systems for Video Technology, the EiC for IEEE Transactions on Multimedia (2017-2019) and the Chair of the steering committee for IEEE Transactions on Multimedia (2020-2022). He serves as General Co-Chair for ACM Multimedia 2018 and ACM CIKM 2019. He is an AAAS Fellow, IEEE Fellow, ACM Fellow, SPIE Fellow, and a member of Academia Europaea.</p>
+
+  </div>
+  <div class="main">
+      <h2>Tutorial Description</h2>
+      <p>Graph machine learning has been extensively studied in both academia and industry. Although booming with a vast number of emerging methods and techniques, most of the literature is built on the in-distribution (I.D.) hypothesis, i.e., testing and training graph data are sampled from the identical distribution. However, this I.D. hypothesis can hardly be satisfied in many real-world graph scenarios where the model performance substantially degrades when there exist <b>distribution shifts</b> between testing and training graph data. To solve this critical problem, several advanced graph machine learning techniques which go beyond the I.D. hypothesis, have made great progress and attracted ever-increasing attention from the research community. This tutorial is to disseminate and promote the recent research achievement on graph out-of-distribution adaptation, graph out-of-distribution generalization, and large language models for tackling distribution shifts, which are exciting and fast-growing research directions in the general field of machine learning and data mining. We will advocate novel, high-quality research findings, as well as innovative solutions to the challenging problems in graph machine learning under distribution shifts and the applications on graphs. This topic is at the core of the scope of IJCAI, and is attractive to machine learning as well as data mining audience from both academia and industry.
+	  </p>
+      
+      <br>
+      <h2>Tutorial Outline</h2>
+      <p>To the best of our knowledge, this tutorial is the first to systematically and comprehensively discuss graph machine learning under distribution shifts, with a great potential to draw a large amount of interests in the community.
+        The tutorial is planned for 1/4 day and organized into 4 sections.
+         <li>The research and industrial motivation for graph machine learning under distribution shifts</li>
+         <li>Graph Adaptation under distribution shifts </li>
+         <li>Graph Generalization under distribution shifts </li>
+         <li>Graph LLM </li>
+         <li>Discussions and future directions </li>
+      </p>
+	  <br>
+	  <h2>Target Audience and Prerequisites</h2>
+	  <p>This tutorial will be highly accessible to the whole machine learning and data mining community, including researchers, students and practitioners who are interested in graph adaptation, graph generalization, graph LLM and their applications in graph-related tasks. The tutorial will be self-contained and designed for introductory and intermediate audiences. No special prerequisite knowledge is required to attend this tutorial.
+	  </p>
+	  
+	  <br>
+	  <h2>Motivation, Relevance and Rationale</h2>
+	  <p>Graph machine learning under distribution shifts is becoming a hot research topic in both academia and industry. This tutorial is to disseminate and promote the recent research achievements on graph machine learning under distribution shifts as well as their applications on graphs, which is an exciting and fast-growing research direction in the general field of machine learning and graph neural networks. We will advocate novel, high-quality research findings, as well as innovative solutions to the challenging problems in graph machine learning under distribution shifts. This topic is at the core of the scope of IJCAI and is attractive to IJCAI audience from both academia and industry.
+	  </p>
+      
+	  <br>
+	  <h2>Tutorial Overview</h2>
+	  <p>We characterize graph machine learning under distribution shifts as those that not only demonstrate competence but also integrate fundamental elements. These elements encompass graph adaptation, graph generalization, and graph LLM, specifically in relation to GNNs. We posit that embedding these characteristics in the design phase of graph ML models will greatly enhance their trustworthiness, thereby fostering their industrial application and widespread use.</p>
+
+      <p>In this tutorial, we discuss promising solutions to graph machine learning under distribution shifts from three aspects:</p>
+	  
+	  <h3>Graph Adaptation under distribution shifts</h3>
+	  <p>As graphs evolve over time, encountering shifts in their underlying distributions, traditional graph ML models face challenges in maintaining performance and adaptability. In response, the recent research focus has shifted towards developing adaptive techniques that can seamlessly adjust to these distribution shifts while preserving model effectiveness. One classic of methods are graph neural architecture search methods, which empower algorithms to autonomously explore and discover effective graph architectures tailored to specific tasks. By automating the design process, graph neural architecture search methods enable the creation of models optimized for adaptability under distribution shifts, fostering more resilient systems. Another classic of methods are graph continual learning methods, which complement these efforts by focusing on models' ability to learn and adapt over time. Rather than treating data as static entities, continual learning frameworks facilitate ongoing model updates and refinement, enabling adaptation to evolving distributions without catastrophic forgetting and advancing the performance of graph models in dynamic real-world scenarios. We will discuss works which aim to propose new approaches to adapt graph ML models under distribution shifts, including two types of representative methods: graph neural architecture search and graph continual learning. </p>
+
+	  <h3>Graph Generalization under distribution shifts</h3>
+	  <p>Besides Out-of-distribution generalized graph model, some works focus on exploiting training schemes with tailored optimization objectives and constraints to promote OOD generalization on graphs, including graph invariant learning, graph adversarial training, and graph self-supervised learning. Some graph invariant learning methods are built upon the invariance principle to address the OOD generalization problem from a principle way, which aim to exploit the invariant relationships between features and labels across different distributions while disregarding the variant spurious correlations. Some graph adversarial training and graph self-supervised learning methods have also been demonstrated to improve graph model robustness against distribution shifts and OOD generalization ability. We will give an introduction to these graph training strategies and introduce some recent approaches for handling OOD generalization. </p>
+
+      <h3>Graph LLM</h3>
+      <p>Large language models (LLMs) have demonstrated remarkable capabilities in in-context learning and few-shot learning, showcasing their ability to generalize across diverse tasks without extensive training or fine-tuning. This inherent adaptability has drawed the interest of researchers in graph-related fields. Numerous studies have sought to integrate LLMs and Graph Neural Networks (GNNs) to develop versatile graph models capable of handling a wide array of data distributions. Some approaches leverage LLMs to enrich the feature representations used by GNNs, enhancing their ability to capture nuanced information from graph data. Conversely, other methodologies utilize GNNs to empower LLMs with structural knowledge, enabling them to effectively tackle graph-related tasks by encoding graph structures into their learning process. This relationship between LLMs and GNNs holds promise for advancing the state-of-the-art in graph representation learning and opens avenues for more robust and adaptable graph-based applications under distribution shifts. We will introduce methods which focus on combining the abilities of large language models to enhance the graph out-of-distribution generalization capability under distribution shifts, including LLMs-enhanced GNNs and GNNs-enhanced LLMs, enabling better in-context learning and few-shot learning abilities across graph distributions in real-world scenarios.</p>
+
+      <p> The tutorial will be presented lively. However, in case of any technical problems, we may also provide a pre-recorded video for the tutorial. </p>
+
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Updated on Apr, 2024</h2>
+</div>
+
+</body>
+</html>
